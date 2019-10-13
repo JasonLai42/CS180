@@ -1,0 +1,62 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Problem 4:\
+\
+	- order the functions according to growth\
+	- infer the simple functions from the basic growth comparisons from discussion i.e. logn < n^2\
+	- have to prove the bounds of each function\
+	- make a diagram with < signs like in discussion\
+	- look at problem 1\
+\
+	answer should be: 2^sqrt(logn) < x^4/3 < n(logn)^3 <  n^logn < 2^n <  2^n^2 < 2^2^n\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 g1 < g3 < g4 < g5 < g2 < g7 < g6\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Problem 6:\
+\
+	- for part a, observe that it runs at O(f(n)) = O(n(n-1))\
+	- for part b, \
+	- for part c, find an algorithm that has better complexity of O(g(n)) where g(n) grows slower\
+	that f(n)\
+	- algorithm: array only fills the upper triangle of the matrix; all elements of i >= j are undefined.\
+	skip those i >= j elements; for i = 1, 2, \'85., n - 1 (very last element is i = j so forget it)\
+					for j = i + 1, i + 2, \'85., n - 1\
+\
+	ADD ALREADY CALCULATED SUMS TO NEXT VALUE; MAYBE RECURSE?\
+	| 1 | 2 | 3 | 4 | 5 | 6 | 7 |\
+\
+	for i = 1\
+	for j = 2\
+		B[i, j] = 3\
+	for i = 1\
+	for j = 3\
+		B[i, j] = B[i, j] + 3 = 6\
+\
+	| X | 3 | 6 | 10 | 15 | 21 | 28 |\
+	| X | X | 5 | 9  | 14 | 20 | 27 |\
+\
+	only need to find the first valid sum of every row, which would run at O(2n), then array lookup \
+	to add onto that sum for rest of values is easy\
+\
+	so instead of \'93Add up array entries A[i] through A[j]\'94, it\'92s \'93Add array entry B[i, j-1] and A[j]\'94\
+\
+Problem 7:\
+\
+	- \
+\
+Problem 8:\
+\
+	- for part a - given only 2 jars (so little!) find a highest safe run algorithm that runs better than \
+	dropping from the first run then second run then \'85. (linear time)\
+	- possibly break 1 jar and then work from the info?\
+	- for part b - for some arbitrary amount of jars, find an algorithm that will grow slower for every \
+	increase in number of jars you have.\
+\
+n-1 elements (\\textit\{O(n)\}; populating the upper triangular matrix without the diagonal)}
